@@ -14,12 +14,34 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+}
+
+header.scroll50 {
+    height: 100px;
 }
 
 .recommendations-area {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     height: calc(min(95vw, 767px) * 9 / 16);
     margin-top: max(min(15vw, 15vh), 150px);
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.recommendations-area.scroll50 {
+    top: calc(-1 * calc(min(95vw, 767px) * 9 / 16) + -1 * max(min(15vw, 15vh), 150px))
 }
 
 .recommendation-link {
@@ -64,10 +86,15 @@ header {
     transition: all 0.2s;
     opacity: 100%;
     z-index: 125;
+    transform: rotateZ(0);
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
 }
 
 .recommendations:hover .recommend-img {
@@ -78,11 +105,16 @@ header {
     transition: all 0.1s;
     opacity: 75%;
     filter: blur(0.1rem);
+    transform: rotateZ(10deg);
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
     -ms-transition: all 0.1s;
     -o-transition: all 0.1s;
     -webkit-filter: blur(0.1rem);
+    -webkit-transform: rotateZ(10deg);
+    -moz-transform: rotateZ(10deg);
+    -ms-transform: rotateZ(10deg);
+    -o-transform: rotateZ(10deg);
 }
 
 .recommend-title {
@@ -180,7 +212,6 @@ body {
 }
 
 .profile-container {
-    border: 1px solid;
     font-size: 1.5em;
     width: min(95%, 767px);
     margin: 0 auto;
