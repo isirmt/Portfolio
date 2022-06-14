@@ -33,15 +33,21 @@ header.scroll50 {
     width: 100%;
     height: calc(min(95vw, 767px) * 9 / 16);
     margin-top: max(min(15vw, 15vh), 150px);
+    z-index: 110;
+    /* transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s; */
+}
+
+.recommendations-area.scroll50 {
+    top: calc(-1 * calc(min(95vw, 767px) * 9 / 16) + -1 * max(min(15vw, 15vh), 150px));
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
-}
-
-.recommendations-area.scroll50 {
-    top: calc(-1 * calc(min(95vw, 767px) * 9 / 16) + -1 * max(min(15vw, 15vh), 150px))
 }
 
 .recommendation-link {
