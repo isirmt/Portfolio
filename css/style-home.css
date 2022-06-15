@@ -26,8 +26,60 @@ header.scroll50 {
     height: 100px;
 }
 
-.recommendations-area {
+.big-title {
+    position: absolute;
+    left: .5rem;
+    top: .5rem;
+    font-size: 3rem;
+    color: var(--c-ddblue);
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+    z-index: 103;
+    font-weight: bold;
+    transition: all 0.1s;
+    opacity: 1;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+}
+
+header.scroll50 .big-title {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .big-title {
+        display: none;
+    }
+}
+
+.header-nav {
     position: relative;
+    height: 50%;
+    margin-left: calc((100vw - max(min(30vw, 30vh), 250px) / 2) / 2);
+    z-index: 105;
+}
+
+header.scroll50 .header-nav {
+    height: 100%;
+}
+
+.header-nav a {
+    height: 100%;
+    display: inline-block;
+}
+
+.header-nav a img {
+    position: relative;
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+}
+
+.recommendations-area {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
