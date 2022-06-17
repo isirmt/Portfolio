@@ -270,7 +270,7 @@ body {
 }
 
 .profile-container {
-    font-size: 1.5em;
+    font-size: 1.3em;
     width: min(95%, 767px);
     margin: 0 auto;
     position: relative;
@@ -278,4 +278,100 @@ body {
 
 .profile-title {
     font-size: 3rem;
+}
+
+.profile-description p:nth-child(2){
+    margin-top: 1.2rem;
+}
+
+.profile-skills {
+    margin-top: 2rem;
+    height: auto;
+}
+
+.profile-skills p:nth-child(1) {
+    font-size: 2rem;
+}
+
+.skill-container {
+    margin-bottom: 1rem;
+}
+
+#canuse-lang,
+#studying-lang,
+#canuse-soft {
+    display: none;
+}
+
+.skills .container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.skills .title{
+    color: white;
+    font-weight: bold;
+    background-color: var(--c-wine);
+    position: relative;
+    padding: .5rem;
+    border-style: solid;
+    border-color: transparent;
+    border-width: .1rem;
+    transition: all .2s;
+    user-select: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+
+.skills .contents {
+    position: relative;
+    background: var(--c-cream);
+    padding: .5rem;
+    color: black;
+    border-style: solid;
+    border-color: var(--c-wine);
+    border-width: .7rem .1rem .1rem .1rem;
+    transition: all .2s;
+    user-select: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+
+.skills .contents ol {
+    margin-left: 1.5rem;
+}
+
+#canuse-lang:not(:checked)~.skills .contents,
+#studying-lang:not(:checked)~.skills .contents,
+#canuse-soft:not(:checked)~.skills .contents {
+    display: none;
+}
+
+#canuse-lang:checked~.skills .contents,
+#studying-lang:checked~.skills .contents,
+#canuse-soft:checked~.skills .contents {
+    display: auto;
+}
+
+#canuse-lang:not(:checked)~.skills .title span::after,
+#studying-lang:not(:checked)~.skills .title span::after,
+#canuse-soft:not(:checked)~.skills .title span::after {
+    content: " (Click to Open)";
+}
+#canuse-lang:checked~.skills .title span::after,
+#studying-lang:checked~.skills .title span::after,
+#canuse-soft:checked~.skills .title span::after {
+    content: " (Click to Close)";
+}
+
+#canuse-lang:checked~.skills .title,
+#studying-lang:checked~.skills .title,
+#canuse-soft:checked~.skills .title {
+    background-color: var(--c-cream);
+    color: black;
+    border-color: var(--c-wine);
 }
