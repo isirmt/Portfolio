@@ -2,10 +2,12 @@ const area = document.getElementById("scroll-out50");
 const head = document.getElementById("scroll-head50");
 const areaClass = document.getElementsByClassName("recommendations-area");
 
+const scroll_border = 100;
+
 window.addEventListener('DOMContentLoaded', function(){
     window.addEventListener('scroll', function(){
 
-        if (window.scrollY > 100){
+        if (window.scrollY > scroll_border){
             if (!area.classList.contains("scroll50")){
                 area.classList.add("scroll50");
             }

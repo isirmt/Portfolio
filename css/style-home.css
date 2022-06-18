@@ -94,7 +94,7 @@ header.scroll50 .header-nav {
 }
 
 .recommendations-area.scroll50 {
-    top: calc(-1 * calc(min(95vw, 767px) * 9 / 16) + -1 * max(min(15vw, 15vh), 150px));
+    top: calc(-1 * calc(min(95vw, 767px) * 9 / 16) + -1.3 * max(min(15vw, 15vh), 150px));
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
