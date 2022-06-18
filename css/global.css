@@ -1,22 +1,23 @@
 :root {
-    --c-cream : #f0f0f0;
-    --c-dblue : #114B5F;
-    --c-ddblue : #153642;
-    --c-rose : #F45B69;
-    --c-wine : #6B2737;
-    --c-lwine :rgb(168, 80, 101);
-    --c-blue : #456990;
-    --c-lgreen : #E4FDE1;
+    --c-cream: #f0f0f0;
+    --c-dblue: #114B5F;
+    --c-ddblue: #153642;
+    --c-rose: #F45B69;
+    --c-wine: #6B2737;
+    --c-lwine: rgb(168, 80, 101);
+    --c-blue: #456990;
+    --c-lgreen: #E4FDE1;
 
-    --s-md : 768px;
+    --s-md: 768px;
 }
 
 body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+        "Hiragino Sans", Meiryo, sans-serif;
 }
 
-ul,li {
+ul,
+li {
     padding: 0;
     margin: 0;
 }

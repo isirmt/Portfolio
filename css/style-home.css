@@ -192,15 +192,15 @@ header.scroll50 .header-nav {
     top: -0.6rem;
     left: 50%;
     transition: all 0.3s ease-out;
-    transform:skew(0);
+    transform: skew(0);
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
-    -webkit-transform:skew(0);
-    -moz-transform:skew(0);
-    -ms-transform:skew(0);
-    -o-transform:skew(0);
+    -webkit-transform: skew(0);
+    -moz-transform: skew(0);
+    -ms-transform: skew(0);
+    -o-transform: skew(0);
 }
 
 @media (max-width: 768px) {
@@ -225,11 +225,11 @@ header.scroll50 .header-nav {
     z-index: 126;
     top: -0.6rem;
     left: -12.5%;
-    transform:skew(-45deg);
-    -webkit-transform:skew(-45deg);
-    -moz-transform:skew(-45deg);
-    -ms-transform:skew(-45deg);
-    -o-transform:skew(-45deg);
+    transform: skew(-45deg);
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -242,12 +242,12 @@ header.scroll50 .header-nav {
         z-index: 126;
         top: -2.5rem;
         left: -100%;
-        transform:skew(0);
-        -webkit-transform:skew(0);
-        -moz-transform:skew(0);
-        -ms-transform:skew(0);
-        -o-transform:skew(0);
-}
+        transform: skew(0);
+        -webkit-transform: skew(0);
+        -moz-transform: skew(0);
+        -ms-transform: skew(0);
+        -o-transform: skew(0);
+    }
 }
 
 .recommend-title p {
@@ -280,7 +280,7 @@ body {
     font-size: 3rem;
 }
 
-.profile-description p:nth-child(2){
+.profile-description p:nth-child(2) {
     margin-top: 1.2rem;
 }
 
@@ -306,9 +306,10 @@ body {
 .skills .container {
     width: 95%;
     margin: 0 auto;
+    cursor: pointer;
 }
 
-.skills .title{
+.skills .title {
     color: white;
     font-weight: bold;
     background-color: var(--c-wine);
@@ -323,6 +324,10 @@ body {
     -moz-transition: all .2s;
     -ms-transition: all .2s;
     -o-transition: all .2s;
+}
+
+.skills .title:hover {
+    background-color: var(--c-lwine);
 }
 
 .skills .contents {
@@ -362,6 +367,7 @@ body {
 #canuse-soft:not(:checked)~.skills .title span::after {
     content: " (Click to Open)";
 }
+
 #canuse-lang:checked~.skills .title span::after,
 #studying-lang:checked~.skills .title span::after,
 #canuse-soft:checked~.skills .title span::after {
@@ -374,4 +380,35 @@ body {
     background-color: var(--c-cream);
     color: black;
     border-color: var(--c-wine);
+}
+
+footer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.foot-tri {
+    width: 0;
+    height: 0;
+    position: relative;
+    border-style: solid;
+    border-width: 0 0 max(min(20vw, 20vh), 200px) 100vw;
+    border-color: transparent transparent var(--c-blue) transparent;
+    z-index: 105;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.foot-text-box {
+    position: absolute;
+    font-size: 1.2rem;
+    top: calc(max(min(20vw, 20vh), 200px) - 2rem);
+    text-align: right;
+    left: calc(100% - 10 * 1.2rem);
+    z-index: 107;
+    color: white;
 }
