@@ -412,3 +412,61 @@ footer {
     z-index: 107;
     color: white;
 }
+
+.productions-container {
+    position: relative;
+    margin-top: 2rem;
+    width: 100%;
+    /* height: calc(100vw / 3 * 9 / 16 * 3); */
+    background-color: aliceblue;
+    /* display: grid;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) 1fr;
+    grid-template-rows: calc(100vw / 3 * 9 / 16) calc(100vw / 3 * 9 / 16) 1fr; */
+}
+
+.cp {
+    display: none;
+}
+
+.productions-container .productions-row .prow {
+    height: calc(100vw / 3 * 9 / 16);
+    display: grid;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "a1 a2 a3";
+}
+
+.productions-container .productions-row .prow div:nth-child(1) {
+    grid-area: a1;
+    background-color: var(--c-lgreen);
+}
+
+.productions-container .productions-row .prow div:nth-child(2) {
+    grid-area: a2;
+    background-color: var(--c-lgreen);
+}
+
+.productions-container .productions-row .prow div:nth-child(3) {
+    grid-area: a3;
+    background-color: var(--c-lgreen);
+}
+
+.productions-container .productions-row .prow div:hover {
+    background-color: aliceblue;
+}
+
+#cprow1:checked+.prow {
+    position: relative;
+}
+
+/* ここに要素記入 */
+
+@media (max-width: 768px) {
+    .productions-container .productions-row .prow {
+        height: calc(100vw * 9 / 16 * 3);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: calc(100vw * 9 / 16) calc(100vw * 9 / 16) 1fr;
+        grid-template-areas: "a1""a2""a3";
+    }
+}
