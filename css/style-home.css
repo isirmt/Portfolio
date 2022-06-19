@@ -418,10 +418,11 @@ footer {
     margin-top: 2rem;
     width: 100%;
     /* height: calc(100vw / 3 * 9 / 16 * 3); */
-    background-color: aliceblue;
+    background-color: rgb(0, 0, 0);
     /* display: grid;
     grid-template-columns: calc(100% / 3) calc(100% / 3) 1fr;
     grid-template-rows: calc(100vw / 3 * 9 / 16) calc(100vw / 3 * 9 / 16) 1fr; */
+    overflow: hidden;
 }
 
 .cp {
@@ -434,29 +435,107 @@ footer {
     grid-template-columns: calc(100% / 3) calc(100% / 3) 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "a1 a2 a3";
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
 }
 
 .productions-container .productions-row .prow div:nth-child(1) {
     grid-area: a1;
-    background-color: var(--c-lgreen);
+    background-color: black;
 }
 
 .productions-container .productions-row .prow div:nth-child(2) {
     grid-area: a2;
-    background-color: var(--c-lgreen);
+    background-color: black;
 }
 
 .productions-container .productions-row .prow div:nth-child(3) {
     grid-area: a3;
-    background-color: var(--c-lgreen);
+    background-color: black;
 }
 
-.productions-container .productions-row .prow div:hover {
-    background-color: aliceblue;
+.productions-container .productions-row .prow::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: transparent;
+    content: "";
+    z-index: 125;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #fff;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
 }
 
-#cprow1:checked+.prow {
+@media (max-width: 768px) {
+    .productions-container .productions-row .prow::after {
+        content: "OPEN";
+        top: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.productions-container .productions-row .prow:hover::after {
+    content: "OPEN";
+    top: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#cprow1:checked~.prow::after,
+#cprow2:checked~.prow::after,
+#cprow3:checked~.prow::after {
+    display: none;
+}
+
+#cprow1:not(:checked)~.prow,
+#cprow2:not(:checked)~.prow,
+#cprow3:not(:checked)~.prow {
+    height: calc(100vw / 3 * 9 / 16 / 1.5);
+}
+
+.prow div {
     position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 110;
+}
+
+.prow div img {
+    position: relative;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 115;
+}
+
+.prow div::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.473);
+    z-index: 120;
+    backdrop-filter: blur(.2rem);
 }
 
 /* ここに要素記入 */
