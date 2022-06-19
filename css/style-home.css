@@ -14,7 +14,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 200;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
@@ -35,7 +35,7 @@ header.scroll50 {
     width: 100%;
     overflow: hidden;
     user-select: none;
-    z-index: 103;
+    z-index: 203;
     font-weight: bold;
     transition: all 0.1s;
     opacity: 1;
@@ -59,7 +59,7 @@ header.scroll50 .big-title {
     position: relative;
     height: 50%;
     margin-left: calc((100vw - max(min(30vw, 30vh), 250px) / 2) / 2);
-    z-index: 105;
+    z-index: 205;
 }
 
 header.scroll50 .header-nav {
@@ -85,7 +85,7 @@ header.scroll50 .header-nav {
     width: 100%;
     height: calc(min(95vw, 767px) * 9 / 16);
     margin-top: max(min(15vw, 15vh), 150px);
-    z-index: 110;
+    z-index: 210;
     /* transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -118,7 +118,7 @@ header.scroll50 .header-nav {
     box-shadow: min(.7vw, .7vh) min(.7vw, .7vh) min(0.9vw, 0.9vh) rgba(0, 0, 0, 0.75);
     user-select: none;
     overflow: hidden;
-    z-index: 120;
+    z-index: 220;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -143,7 +143,7 @@ header.scroll50 .header-nav {
     pointer-events: none;
     transition: all 0.2s;
     opacity: 100%;
-    z-index: 125;
+    z-index: 225;
     transform: rotateZ(0);
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -179,7 +179,7 @@ header.scroll50 .header-nav {
     font-size: 2rem;
     text-align: center;
     position: relative;
-    z-index: 130;
+    z-index: 230;
 }
 
 .recommend-title::before {
@@ -188,7 +188,7 @@ header.scroll50 .header-nav {
     height: 3.1rem;
     background: black;
     position: absolute;
-    z-index: 126;
+    z-index: 226;
     top: -0.6rem;
     left: 50%;
     transition: all 0.3s ease-out;
@@ -210,7 +210,7 @@ header.scroll50 .header-nav {
         height: 6.6rem;
         background: black;
         position: absolute;
-        z-index: 126;
+        z-index: 226;
         top: -2.5rem;
         left: 50%;
     }
@@ -222,7 +222,7 @@ header.scroll50 .header-nav {
     height: 3.1rem;
     background: black;
     position: absolute;
-    z-index: 126;
+    z-index: 226;
     top: -0.6rem;
     left: -12.5%;
     transform: skew(-45deg);
@@ -239,7 +239,7 @@ header.scroll50 .header-nav {
         height: 6.6rem;
         background: black;
         position: absolute;
-        z-index: 126;
+        z-index: 226;
         top: -2.5rem;
         left: -100%;
         transform: skew(0);
@@ -252,7 +252,7 @@ header.scroll50 .header-nav {
 
 .recommend-title p {
     position: relative;
-    z-index: 130;
+    z-index: 230;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
