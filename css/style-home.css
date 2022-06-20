@@ -435,6 +435,9 @@ footer {
     grid-template-columns: calc(100% / 3) calc(100% / 3) 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "a1 a2 a3";
+    border-width: 1rem 0;
+    border-style: solid;
+    border-color: var(--c-dblue);
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -508,6 +511,7 @@ footer {
 #cprow2:not(:checked)~.prow,
 #cprow3:not(:checked)~.prow {
     height: calc(100vw / 3 * 9 / 16 / 1.5);
+    border-width: 0;
 }
 
 .prow div {
