@@ -681,6 +681,7 @@ footer {
 @media (max-width: 768px) {
     .productions-container .productions-row .prow {
         height: calc(100vw * 9 / 16 * 3);
+        overflow: hidden;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: calc(100vw * 9 / 16) calc(100vw * 9 / 16) 1fr;
