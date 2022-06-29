@@ -592,7 +592,9 @@ footer {
         -webkit-animation: imgfreq 2s linear infinite .2s;
     }
 
-    #cprow1:checked~.prow:hover div img {
+    #cprow1:checked~.prow:hover div img,
+    #cprow2:checked~.prow:hover div img,
+    #cprow3:checked~.prow:hover div img {
         animation: none;
         -webkit-animation: none;
     }
