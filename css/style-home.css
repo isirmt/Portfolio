@@ -94,8 +94,8 @@ header.scroll50 .header-nav {
     user-select: none;
     pointer-events: none;
     user-drag: none;
-	-webkit-user-drag: none;
-	-moz-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
 }
 
 .recommendations-area {
@@ -164,8 +164,8 @@ header.scroll50 .header-nav {
     width: 100%;
     height: 100%;
     user-drag: none;
-	-webkit-user-drag: none;
-	-moz-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -459,7 +459,6 @@ footer {
     margin-top: 2rem;
     width: 100%;
     background-color: transparent;
-    overflow: hidden;
 }
 
 .cp {
@@ -570,6 +569,46 @@ footer {
     margin: 0;
 }
 
+.prow>div::before {
+    position: absolute;
+    content: "Click to Close";
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    background-color: var(--c-dblue);
+    box-shadow: 0 .2rem .2rem black;
+    z-index: 150;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2.5rem;
+    white-space: nowrap;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+    .prow>div::before {
+        opacity: 1;
+        letter-spacing: 0;
+    }
+}
+
+.prow>div:hover::before {
+    opacity: 1;
+    letter-spacing: 0;
+}
+
 .prow div {
     position: relative;
     overflow: hidden;
@@ -586,7 +625,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    pointer-events:auto;
+    pointer-events: auto;
     user-drag: none;
     transition: all 0.2s;
     -webkit-user-drag: none;
@@ -629,6 +668,8 @@ footer {
     text-decoration: none;
 }
 
+/* ここでhover下移動 */
+
 .productions-container .productions-row .prow div .prow-title {
     position: absolute;
     background-color: transparent;
@@ -654,6 +695,28 @@ footer {
     -moz-transform: none;
     -ms-transform: none;
     -o-transform: none;
+}
+
+@media (max-width: 768px) {
+    .productions-container .productions-row .prow>div:nth-child(1) .prow-title {
+        transform: translateY(1rem);
+        -webkit-transform: translateY(1rem);
+        -moz-transform: translateY(1rem);
+        -ms-transform: translateY(1rem);
+        -o-transform: translateY(1rem);
+    }
+
+    .productions-container .productions-row .prow>div:not(:nth-child(1))::before {
+        display: none;
+    }
+}
+
+.productions-container .productions-row .prow div:hover .prow-title {
+    transform: translateY(1rem);
+    -webkit-transform: translateY(1rem);
+    -moz-transform: translateY(1rem);
+    -ms-transform: translateY(1rem);
+    -o-transform: translateY(1rem);
 }
 
 .productions-container .productions-row #cprow1:not(:checked)~.prow div .prow-title,
