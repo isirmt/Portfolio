@@ -485,6 +485,10 @@ footer {
 @media (max-width: 768px) {
     .productions-container .productions-row .prow::after {
         content: "OPEN";
+        justify-content: center;
+        align-items: left;
+        display: flex;
+        flex-direction: column;
         top: 0%;
         height: calc(100% - 2rem);
         background-color: rgba(0, 0, 0, 0.4);
