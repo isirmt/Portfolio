@@ -624,8 +624,12 @@ footer {
     }
 }
 
-.prow div img:hover {
-    opacity: .7;
+@media (min-width: 769px) {
+    .prow div:hover img {
+        opacity: .7;
+        filter: blur(.15rem);
+        -webkit-filter: blur(.15rem);
+    }
 }
 
 @keyframes imgfreq {
@@ -668,13 +672,14 @@ footer {
 
 .productions-container .productions-row .prow div .prow-title {
     position: absolute;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1);
     display: block;
     margin: 1rem 0 0 10%;
     backdrop-filter: blur(.2rem);
     z-index: 125;
     height: auto;
     width: 80%;
+    opacity: 1;
     transform: none;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
@@ -685,6 +690,13 @@ footer {
     -moz-transform: none;
     -ms-transform: none;
     -o-transform: none;
+}
+
+@media (min-width: 769px) {
+
+    .productions-container .productions-row .prow div:hover .prow-title {
+        background-color: transparent;
+    }
 }
 
 .productions-container .productions-row .prow div:hover .prow-title {
@@ -728,6 +740,7 @@ footer {
 .productions-container .productions-row #cprow2:not(:checked)~.prow div .prow-title,
 .productions-container .productions-row #cprow3:not(:checked)~.prow div .prow-title {
     transform: translateY(-3rem);
+    opacity: 0;
     -webkit-transform: translateY(-3rem);
     -moz-transform: translateY(-3rem);
     -ms-transform: translateY(-3rem);
@@ -763,8 +776,8 @@ footer {
     align-items: center;
     display: flex;
     flex-direction: column;
-    pointer-events: auto;
-    opacity: 1;
+    pointer-events: none;
+    opacity: 0;
     transform: none;
     left: calc((100% - max(60%, 7rem)) / 2);
     -webkit-transition: all 0.2s;
@@ -781,9 +794,16 @@ footer {
     -o-border-radius: 0;
 }
 
+.productions-container .productions-row .prow>div:hover .prow-link .prow-button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 @media (max-width: 768px) {
     .productions-container .productions-row .prow .prow-link .prow-button {
         top: calc(calc(100vw * 9 / 16) - max(40%, 2.5rem) * 1.8);
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
@@ -836,5 +856,11 @@ footer {
         grid-template-columns: 100%;
         grid-template-rows: calc(100vw * 9 / 16) calc(100vw * 9 / 16) 1fr;
         grid-template-areas: "a1""a2""a3";
+    }
+
+    .productions-container .productions-row #cprow1:not(:checked)~.prow,
+    .productions-container .productions-row #cprow2:not(:checked)~.prow,
+    .productions-container .productions-row #cprow3:not(:checked)~.prow {
+        grid-template-areas: "a2""a3""a1";
     }
 }
