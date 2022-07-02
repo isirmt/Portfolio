@@ -546,6 +546,12 @@ footer {
     -o-transition: all 0.2s;
 }
 
+.productions-container .productions-row #cprow1:not(:checked)~.prow>div::before,
+.productions-container .productions-row #cprow2:not(:checked)~.prow>div::before,
+.productions-container .productions-row #cprow3:not(:checked)~.prow>div::before {
+    opacity: 0;
+}
+
 @media (max-width: 768px) {
     .prow>div::before {
         opacity: 1;
