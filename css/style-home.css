@@ -543,12 +543,16 @@ footer {
     .productions-container:hover .productions-row #cprow2:checked~.prow>div,
     .productions-container:hover .productions-row #cprow3:checked~.prow>div {
         opacity: .3;
+        filter: brightness(.7);
+        -webkit-filter: brightness(.7);
     }
 
     .productions-container .productions-row:hover #cprow1:checked~.prow>div:hover,
     .productions-container .productions-row:hover #cprow2:checked~.prow>div:hover,
     .productions-container .productions-row:hover #cprow3:checked~.prow>div:hover {
         opacity: 1;
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
     }
 }
 
@@ -749,6 +753,12 @@ footer {
     .productions-container .productions-row #cprow2:not(:checked)~.prow>div,
     .productions-container .productions-row #cprow3:not(:checked)~.prow>div {
         top: -2rem;
+    }
+
+    .productions-container .productions-row .prow>div .prow-title {
+        background-color: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     .productions-container .productions-row .prow>div:nth-child(1) .prow-title {
